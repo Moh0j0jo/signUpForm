@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formstyle.css">
+    <link rel="stylesheet" href="/signUpForm/Norse-Bold/stylesheet.css">
+    <title>Sign Up Form</title>
+</head>
+
+<body class="form-body">
+
+    <div class="form-img">
+        <div class="form-logo">
+            <img id="form-logo" src="pictures/odinLined_logo.png" alt="odinLined_logo">
+            <p id="logotext">ODIN</p>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <p class="firsttext">
+            This is not a real online service!
+            You know you need something like this in your life to help you realize
+            your deepest dreams. Sign up <i>now</i> to get started.
+            <br>
+            <br>
+            You <i>know</i> you want to.
+        </p>
+
+        <form action="" class="form-form">
+            <div class="form-fistname">
+                <label for="firstname">First Name</label>
+                <input id="name" placeholder="Name *" name="name" type="text" value="" pattern="^[^0-9]+$" size="30"
+                    maxlength="245" required>
+
+            </div>
+
+            <div class="form-surname">
+                <label for="surname">Surname</label>
+                <input id="surname" placeholder="Surname *" name="surname" type="text" value="" pattern="^[^0-9]+$"
+                    size="30" maxlength="245" required>
+
+            </div>
+
+            <div class="form-email">
+                <label for="email">Email</label>
+                <input id="email" placeholder="Email *" name="email" type="email" value="" size="30" maxlength="100"
+                    required>
+
+            </div>
+
+            <div class="form-phone">
+                <label for="phone">Mobile</label>
+                <input id="phone" placeholder="Phone" name="phone" type="text" value=""
+                    pattern="((?:\+?3|0)6)(?:-|\()?(\d{1,2})(?:-|\))?(\d{3})-?(\d{3,4})" maxlength="11"
+                    title="Only hungarian mobile phones are acceptable">
+
+            </div>
+
+            <div class="form-password">
+                <label for="password">Password</label>
+                <input id="password" placeholder="Password *" name="password" type="password" value="" minlength="6"
+                    required>
+            </div>
+
+            <div class="form-password">
+                <label for="password">Confirm Password</label>
+                <input id="password" placeholder="Confirm Password *" name="Confirmpassword" type="Confirmpassword"
+                    value="" minlength="6" required>
+            </div>
+
+        </form>
+
+        <div class="form-submit">
+            <input name="submit" type="submit" id="submit" class="submit" value="submit">
+        </div>
+
+        <footer>
+            <small>&copy; Copyright 2022, moho jojo</small>
+        </footer>
+</body>
+
+
+<script src="form.js"></script>
+
+</html>
