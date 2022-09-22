@@ -7,6 +7,12 @@
     font-weight: normal;
     font-style: normal;
 }
+/* General Styles */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .form-body {
     width: 70%;
@@ -22,45 +28,64 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    align-content: center;
+    display: flex;
+    align-items: center;
 
 }
 
 .form-logo {
-    width: auto;
+    width: 100%;
     height: 150px;
     display: flex;
+    align-items: center;
+    align-self: center;
     justify-content: center;
     background-color: rgba(6, 6, 6, 0.501);
 }
 
 #form-logo {
-    height: 100px;
-    height: 100px;
-    margin: auto 0; 
+    height: 130px;
+    height: 130px;
+    align-self: center;
 }
 
 #logotext {
     font-family: "Norse-Bold";
     font-size:5em;
     color: white;
-    margin: auto 0;
     align-self: center;
 }
 
+/* The form section */
+
 .form-container {
     background: white;
+    overflow: hidden;
 }
 
-
-.form-submit>input {
-    border-radius: 5px;
-    background: rgb(21, 109, 21);
+.form-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.firsttext {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    font-weight: bolder;
-    font-style: normal;
+.form-firstname,
+.form-surname,
+.form-email,
+.form-phone,
+.form-password {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding:30px;
+    border: 1px solid red; 
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
