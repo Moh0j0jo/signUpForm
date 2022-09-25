@@ -55,26 +55,24 @@
 /* The form section */
 
 .form-container {
-    background: white;
+    min-width: 350px;
+    background: gray;
     overflow: scroll;
     overflow-y: auto;
     overflow-x: auto;
 }
 
-.form-container p {
+.form-container p, h4 {
+    text-align: center;
     margin: 0;
-    padding: 30px 30px;
-}
-
-h4 {
-    margin: 0;
-    padding-left: 30px;
+    padding: 30px;
+    font-size: 1.5em;
 }
 
 .form-form {
     display: flex;
     flex-flow: row;
-    justify-content: center;
+    justify-content:center;
     flex-wrap: wrap;
 }
 
@@ -85,34 +83,39 @@ h4 {
 .form-password {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    padding: 2em;
-    /* border: 1px solid red;  */
+    font-size: 1.5em;
+    justify-content: space-between;
+    padding: 20px;  
+    background-color: darkgrey;
+    border-radius: 10px;
+    color: black;
+    margin: 30px;
+    
 }
 
 
 .form-submit {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: space-around;
-
+    align-items: center;    
 }
 
 .form-submit p {
     font-size: 0.7em;
-    padding: 4px;
-    margin: 0px;
-
+    padding: 5px;
 }
 
 #submit {
     width: 10em;
     height: 3em;
     border-radius: 10px;
-    background-color: rgba(3, 110, 3, 0.799);
+    background-color: #596D48;
     font-weight: bold;
     color: white;
+}
+
+.form-submit input:hover {
+    filter: drop-shadow(2px 5px 2px rgba(0,0,0,0.3));
 }
 
 footer {
@@ -125,37 +128,38 @@ footer {
     text-align: center;
 }
 
+input[type="text"], input[type="email"], input[type="url"],input[type="password"], textarea {
+    background-color: #fff;
+    padding: 12px 10px 12px;
+    font-size: 16px;
+    font-size: 1rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
 
 /* Validation */
 
 
-
-.form-form input:focus:invalid,
-.form-form textarea:focus:invalid {
-    background-color: transparent;
-    border: 1px solid #b92326;
+.form-form textarea input:default{
+    border: 2px solid black;
     border-radius: 5px;
 }
 
-
-.form-form input:focus:valid,
-.form-form textarea:focus:valid {
-    border: 2px solid #8BC34A;
-    background-color: transparent;
-    border-radius: 5px;
-}
-
-
-.form-form input:invalid,
-.form-form textarea:invalid {
-    border: 1px solid #b92326;
-    background-color: rgba(185, 35, 38, 0.25);
-    border-radius: 5px;
-}
 
 .form-form input:valid,
 .form-form textarea:valid {
-    border: 2px solid #8BC34A;
-    background-color: rgba(139, 195, 74, 0.25);
+    border: 2px solid #596D48;
     border-radius: 5px;
 }
+
+.form-form input:invalid,
+.form-form textarea:invalid {
+    border: 2px solid #b92326;
+    border-radius: 5px;
+}
+
+
+
