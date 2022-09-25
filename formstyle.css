@@ -11,7 +11,7 @@
 
 .form-body {
     width: 70%;
-    height: 700px;
+    height: 850px;
     margin: auto;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -47,7 +47,7 @@
 
 #logotext {
     font-family: "Norse-Bold";
-    font-size:5em;
+    font-size: 5em;
     color: white;
     align-self: center;
 }
@@ -56,20 +56,22 @@
 
 .form-container {
     background: white;
-    overflow:scroll;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
-.form-container p{
+.form-container p {
     margin: 0;
-    padding: 30px 30px ;
+    padding: 30px 30px;
 }
 
-h4{
-    margin:0;
+h4 {
+    margin: 0;
     padding-left: 30px;
 }
 
-.form-form{
+.form-form {
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -92,8 +94,8 @@ h4{
 .form-submit {
     display: flex;
     flex-direction: column;
-    align-items: center ;
-    align-content: space-around;    
+    align-items: center;
+    align-content: space-around;
 
 }
 
@@ -108,7 +110,7 @@ h4{
     width: 10em;
     height: 3em;
     border-radius: 10px;
-    background-color: rgba(3, 110, 3, 0.799) ;
+    background-color: rgba(3, 110, 3, 0.799);
     font-weight: bold;
     color: white;
 }
@@ -121,4 +123,39 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-  }
+}
+
+
+/* Validation */
+
+
+
+.form-form input:focus:invalid,
+.form-form textarea:focus:invalid {
+    background-color: transparent;
+    border: 1px solid #b92326;
+    border-radius: 5px;
+}
+
+
+.form-form input:focus:valid,
+.form-form textarea:focus:valid {
+    border: 2px solid #8BC34A;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+
+.form-form input:invalid,
+.form-form textarea:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
+    border-radius: 5px;
+}
+
+.form-form input:valid,
+.form-form textarea:valid {
+    border: 2px solid #8BC34A;
+    background-color: rgba(139, 195, 74, 0.25);
+    border-radius: 5px;
+}
